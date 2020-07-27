@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public AudioSource dashSound;
     public float speed = 5f;
     public float dashLength = 100f;
     public float dashSpeed = 20f;
@@ -22,6 +23,7 @@ public class PlayerMove : MonoBehaviour
                 dashHorizontal = horizontalInput;
                 dashVertical = verticalInput;
                 currDash = (int)Math.Floor(dashLength / dashSpeed);
+                dashSound.PlayOneShot(dashSound.clip);
             }
             else
             {
