@@ -16,6 +16,7 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.GetComponent<BulletPhysics>().enabled = true;
+            bulletClone.GetComponent<Rigidbody2D>().simulated = true;
             bulletClone.transform.position = gunPoint.position;
             bulletClone.transform.rotation = armPivot.rotation;
             Rigidbody2D rb = bulletClone.GetComponent<Rigidbody2D>();

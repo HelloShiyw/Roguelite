@@ -531,7 +531,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548167996}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -769,7 +769,7 @@ MonoBehaviour:
   armPivot: {fileID: 1162230692}
   bullet: {fileID: 1548167996}
   gunshotSFX: {fileID: 1548167998}
-  bulletForce: 50
+  bulletForce: 75
 --- !u!82 &1797912130
 AudioSource:
   m_ObjectHideFlags: 0
