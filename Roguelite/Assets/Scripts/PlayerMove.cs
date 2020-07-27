@@ -16,14 +16,17 @@ public class PlayerMove : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        if (Input.GetButtonDown("Dash"))
-        {
-            dashHorizontal = horizontalInput;
-            dashVertical = verticalInput;
-            currDash = (int)Math.Floor(dashLength / dashSpeed);
-        }
         if (currDash == 0) {
-            transform.Translate(new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed);
+            if (Input.GetButtonDown("Dash"))
+            {
+                dashHorizontal = horizontalInput;
+                dashVertical = verticalInput;
+                currDash = (int)Math.Floor(dashLength / dashSpeed);
+            }
+            else
+            {
+                transform.Translate(new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed);
+            }
         }
         else
         {
