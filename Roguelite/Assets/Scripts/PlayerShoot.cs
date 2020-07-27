@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public Transform gunPoint;
     public Transform armPivot;
     public GameObject bullet;
+    public AudioSource gunshotSFX;
     public float bulletForce = 1f;
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class PlayerShoot : MonoBehaviour
             bulletClone.transform.rotation = armPivot.rotation;
             Rigidbody2D rb = bulletClone.GetComponent<Rigidbody2D>();
             rb.AddForce(bulletClone.transform.right*bulletForce, ForceMode2D.Impulse);
+            gunshotSFX.PlayOneShot(gunshotSFX.clip);
         }
     }
 }
