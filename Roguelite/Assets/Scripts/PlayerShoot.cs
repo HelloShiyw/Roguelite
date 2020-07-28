@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    //public Transform gunPoint;
-    //public Transform armPivot;
+    public GameObject gunObject;
     public GameObject bullet;
-    public float bulletForce = 1f;
     // Update is called once per frame
     void Update()
     {
@@ -17,10 +15,10 @@ public class PlayerShoot : MonoBehaviour
             bulletClone.GetComponent<BulletPhysics>().enabled = true;
             bulletClone.GetComponent<Rigidbody2D>().simulated = true;
             bulletClone.transform.position = transform.position;
-            // bulletClone.transform.position = gunPoint.position;
-            //bulletClone.transform.rotation = armPivot.rotation;
+            bulletClone.transform.position = gunObject.transform.position;
+            bulletClone.transform.rotation = gunObject.transform.rotation;
             Rigidbody2D rb = bulletClone.GetComponent<Rigidbody2D>();
-            rb.AddForce(bulletClone.transform.right*bulletForce, ForceMode2D.Impulse);
+            rb.AddForce(bulletClone.transform.right*gunObject.GetComponent<GunDisplay>().gun.bulletForce, ForceMode2D.Impulse);
             AudioManager.PlaySound("gunshot");
         }
     }
