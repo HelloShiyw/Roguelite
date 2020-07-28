@@ -2,10 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerMove : MonoBehaviour
 {
-    public AudioSource dashSound;
+    //public AudioSource dashSound;
     public float speed = 5f;
     public float dashLength = 100f;
     public float dashSpeed = 20f;
@@ -15,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(1.0f / Time.deltaTime);
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         if (currDash == 0) {
@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
                 dashHorizontal = horizontalInput;
                 dashVertical = verticalInput;
                 currDash = (int)Math.Floor(dashLength / dashSpeed);
-                dashSound.PlayOneShot(dashSound.clip);
+                AudioManager.PlaySound("dash");
             }
             else
             {
@@ -35,5 +35,6 @@ public class PlayerMove : MonoBehaviour
             transform.Translate(new Vector2(dashHorizontal, dashVertical) * Time.deltaTime * dashSpeed);
             currDash--;
         }
+        transform.Translate(new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed);
     }
 }
