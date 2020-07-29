@@ -11,4 +11,5 @@ public class Gun : ScriptableObject
     public string sprite;
     public Bullet bullet;
     public float damage; //yet to do anything cuz no enemies or hp
+    public float scaleX, scaleY, scaleZ;
 }

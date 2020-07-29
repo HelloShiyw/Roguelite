@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26308506293dd5e448de039947808c2f, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  gunName: Shotgun
+  holdRadius: 2
+  bulletForce: 50
+  sprite: shotgun
+  bullet: {fileID: 11400000, guid: e27e5dd0e034ea94fbc895aab14be26f, type: 2}
+  damage: 10
+  scaleX: 0.3
+  scaleY: 0.3
+  scaleZ: 0.3

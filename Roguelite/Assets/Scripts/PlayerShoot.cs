@@ -27,7 +27,9 @@ public class PlayerShoot : MonoBehaviour
                 bd.bullet = bullet;
                 bulletClone.AddComponent<BulletPhysics>();
                 bulletClone.transform.position = bulletPoint.position;
-                bulletClone.transform.rotation = gunPos.rotation;
+                Vector3 bulletRotation = gunPos.eulerAngles;
+                bulletRotation.z += Random.Range(bullet.minDeviation, bullet.maxDeviation);
+                bulletClone.transform.eulerAngles = bulletRotation;
                 bulletClone.transform.localScale = new Vector3(bullet.scaleX, bullet.scaleY, bullet.scaleZ);
                 Rigidbody2D rb = bulletClone.AddComponent<Rigidbody2D>();
                 rb.AddForce(bulletClone.transform.right * gun.bulletForce, ForceMode2D.Impulse);
