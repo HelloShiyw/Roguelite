@@ -9,6 +9,6 @@ public class Gun : ScriptableObject
     public float holdRadius;
     public float bulletForce;
     public string sprite;
-    public string bullet; //maybe wont use
+    public Bullet bullet;
     public float damage; //yet to do anything cuz no enemies or hp
 }

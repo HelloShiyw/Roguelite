@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26308506293dd5e448de039947808c2f, type: 3}
-  m_Name: Handgun
+  m_Script: {fileID: 11500000, guid: c4d86ae5b39f50a49b11b87f9a1d9d1c, type: 3}
+  m_Name: Bullet
   m_EditorClassIdentifier: 
-  gunName: Handgun
-  holdRadius: 1.5
-  bulletForce: 75
-  sprite: handgun
-  bullet: {fileID: 11400000, guid: f683198c840267a4d9969c72e3abfa51, type: 2}
-  damage: 20
+  sprite: bullet
+  shotType: normal
+  shotAmount: 1
+  minDeviation: 0
+  maxDeviation: 0
+  scaleX: 0.2
+  scaleY: 0.2
+  scaleZ: 0.2
