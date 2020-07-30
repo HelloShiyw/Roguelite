@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     private Transform bulletPoint;
     private Gun gun;
     private Bullet bullet;
+    private float chargeTime = 0f;
     void Start()
     {
         gunObject = gameObject.GetComponent<CharacterDisplay>().pickedGun;
@@ -20,7 +21,8 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        chargeTime = Mathf.Clamp(chargeTime - Time.deltaTime, 0, gun.chargeTime);
+        if (chargeTime <= 0 && Input.GetButton("Fire1"))
         {
             for (int i = 0; i < gun.shotAmount; i++)
             {
@@ -35,6 +37,7 @@ public class PlayerShoot : MonoBehaviour
                 bulletClone.transform.localScale = new Vector3(bullet.scaleX, bullet.scaleY, bullet.scaleZ);
                 Rigidbody2D rb = bulletClone.AddComponent<Rigidbody2D>();
                 rb.AddForce(bulletClone.transform.right * gun.bulletForce, ForceMode2D.Impulse);
+                chargeTime = gun.chargeTime;
             }
             AudioManager.PlaySound("gunshot");
         }

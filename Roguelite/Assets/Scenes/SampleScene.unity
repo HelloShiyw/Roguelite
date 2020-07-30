@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: c98e6fc076e77ab408c6f71eaf5f3191, type: 2}
-  pickedGun: {fileID: 833161027}
-  gunPoint: {fileID: 1145965099}
+  pickedGun: {fileID: 1697551471}
+  gunPoint: {fileID: 1598688490}
 --- !u!4 &878459832
 Transform:
   m_ObjectHideFlags: 0

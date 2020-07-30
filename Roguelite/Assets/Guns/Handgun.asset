@@ -22,6 +22,6 @@ MonoBehaviour:
   damage: 20
   minDeviation: 0
   maxDeviation: 0
-  chargeTime: 0
+  chargeTime: 0.2
   shotAmount: 1
   bullet: {fileID: 11400000, guid: f683198c840267a4d9969c72e3abfa51, type: 2}
