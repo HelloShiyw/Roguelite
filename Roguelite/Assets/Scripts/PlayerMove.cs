@@ -16,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        Vector2 move = new Vector2();
         if (currDash == 0) {
             if (Input.GetButtonDown("Dash"))
             {
@@ -23,17 +24,17 @@ public class PlayerMove : MonoBehaviour
                 dashVertical = verticalInput;
                 currDash = (int)Math.Floor(dashLength / dashSpeed);
                 AudioManager.PlaySound("dash");
-            }
-            else
+            } 
+            else 
             {
-                transform.Translate(new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed);
+               move = new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed;
             }
         }
         else
         {
-            transform.Translate(new Vector2(dashHorizontal, dashVertical) * Time.deltaTime * dashSpeed);
+            move = new Vector2(dashHorizontal, dashVertical) * Time.deltaTime * dashSpeed;
             currDash--;
         }
-        transform.Translate(new Vector2(horizontalInput, verticalInput) * Time.deltaTime * speed);
+        transform.Translate(move);
     }
 }

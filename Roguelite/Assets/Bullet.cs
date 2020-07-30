@@ -6,6 +6,5 @@ using UnityEngine;
 public class Bullet : ScriptableObject
 {
     public string sprite, shotType; //shot types may be spray and normal?
-    public int shotAmount;
-    public float minDeviation, maxDeviation, scaleX, scaleY, scaleZ;
+    public float scaleX, scaleY, scaleZ;
 }

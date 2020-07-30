@@ -5,11 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Gun", menuName = "Gun")]
 public class Gun : ScriptableObject
 {
-    public string gunName;
-    public float holdRadius;
-    public float bulletForce;
-    public string sprite;
+    public string gunName, sprite;
+    public float holdRadius, bulletForce, scaleX, scaleY, scaleZ, damage, minDeviation, maxDeviation, chargeTime;
+    public int shotAmount;
     public Bullet bullet;
-    public float damage; //yet to do anything cuz no enemies or hp
-    public float scaleX, scaleY, scaleZ;
 }

@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class GunPivot : MonoBehaviour
 {
-    public GameObject gunObject;
+    private GameObject gunObject;
     private Gun gun;
     void Start()
     {
+        gunObject = gameObject.GetComponent<CharacterDisplay>().pickedGun;
         gun = gunObject.GetComponent<GunDisplay>().gun;
     }
     void Update()

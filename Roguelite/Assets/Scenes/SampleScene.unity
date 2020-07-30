@@ -283,6 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: c98e6fc076e77ab408c6f71eaf5f3191, type: 2}
+  pickedGun: {fileID: 833161027}
+  gunPoint: {fileID: 1145965099}
 --- !u!4 &878459832
 Transform:
   m_ObjectHideFlags: 0
@@ -295,6 +297,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 833161029}
+  - {fileID: 1697551472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -376,7 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b96d43547ab02468488d0615a63af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunObject: {fileID: 833161027}
 --- !u!114 &878459836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,8 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6772122391daa3c44b13bee090cdfba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunObject: {fileID: 833161027}
-  bulletPoint: {fileID: 1145965099}
 --- !u!1 &1145965098
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,12 +476,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697551471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.58, y: -6.54, z: -1.6577108}
+  m_LocalPosition: {x: 1.58, y: -6.54, z: -0.15472293}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1598688490}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 878459832}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1697551474
 MonoBehaviour:

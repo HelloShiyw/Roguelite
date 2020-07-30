@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   gunName: Shotgun
+  sprite: shotgun
   holdRadius: 2
   bulletForce: 50
-  sprite: shotgun
-  bullet: {fileID: 11400000, guid: e27e5dd0e034ea94fbc895aab14be26f, type: 2}
-  damage: 10
   scaleX: 0.3
   scaleY: 0.3
   scaleZ: 0.3
+  damage: 10
+  minDeviation: -30
+  maxDeviation: 30
+  chargeTime: 0
+  shotAmount: 5
+  bullet: {fileID: 11400000, guid: e27e5dd0e034ea94fbc895aab14be26f, type: 2}

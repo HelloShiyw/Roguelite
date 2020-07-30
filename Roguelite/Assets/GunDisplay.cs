@@ -8,7 +8,10 @@ public class GunDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpriteRenderer spriteRenderer = gameObject.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
-        spriteRenderer.sprite = Resources.Load<SpriteRenderer>(gun.sprite).sprite;
+        if (gameObject.GetComponentInParent<CharacterDisplay>().pickedGun.GetComponent<GunDisplay>().gun.gunName.Equals(gun.gunName))
+        {
+            SpriteRenderer spriteRenderer = gameObject.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+            spriteRenderer.sprite = Resources.Load<SpriteRenderer>(gun.sprite).sprite;
+        }
     }
 }
